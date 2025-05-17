@@ -59,12 +59,12 @@ The deployment script (`deploy_model.py` - *consider renaming your deployment sc
 
 The pipeline accepts standard video files (e.g., `.mp4`, `.avi`) as input. Below is an example of a low-resolution input frame (480x270):
 
-![Low-Resolution Input Frame](pic_1.png)
+![Low-Resolution Input Frame](pic 1.png)
 
 ### Output
 
 The pipeline generates a 2x upscaled video file with double the width and height of the input. Here's an example of a corresponding super-resolved output frame (960x540):
 
-![High-Resolution Output Frame](pic_2.png)
+![High-Resolution Output Frame](pic 2.png)
 
 **Note:** The visual improvement will depend on the complexity of the original video and the quality achieved during training (e.g., your reported PSNR of around 30 dB).
