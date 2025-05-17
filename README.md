@@ -37,10 +37,12 @@ The training script (`train_model.py` - *consider renaming your training script 
 5.  **Validation:** Periodically evaluates the model on a validation set to monitor performance (using PSNR as a key metric) and prevent overfitting.
 6.  **Model Saving:** Saves the best-performing model weights (`best_model.pth`) based on the validation PSNR. Checkpoints are also saved periodically.
 
-### 2. Deployment (Inference) Pipeline
 
-The deployment script (`deploy_model.py` - *consider renaming your deployment script for clarity*) takes an input video and outputs an upscaled video:
 
+
+
+
+##model
 1.  **Model Loading:** Loads the trained weights (`best_model.pth`) into an instance of the `ViTVideoSR` model architecture.
 2.  **Video Input:** Reads the input low-resolution video using OpenCV (`cv2`).
 3.  **Frame-by-Frame Processing:** Iterates through each frame of the input video:
