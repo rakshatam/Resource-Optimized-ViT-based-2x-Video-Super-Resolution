@@ -40,7 +40,7 @@ The pipeline involves two main parts: **Training** and **Deployment (Inference)*
 
 
 
-##model
+## model 
 1.  **Model Loading:** Loads the trained weights (`best_model.pth`) into an instance of the `ViTVideoSR` model architecture.
 2.  **Video Input:** Reads the input low-resolution video using OpenCV (`cv2`).
 3.  **Frame-by-Frame Processing:** Iterates through each frame of the input video:
