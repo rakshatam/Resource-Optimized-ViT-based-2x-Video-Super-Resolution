@@ -68,3 +68,46 @@ The pipeline generates a 2x upscaled video file with double the width and height
 ![High-Resolution Output Frame](pic 2.png)
 
 **Note:** The visual improvement will depend on the complexity of the original video and the quality achieved during training (e.g., your reported PSNR of around 30 dB).
+
+## Model Training
+
+To train the model yourself:
+
+1.  Ensure you have the DIV2K dataset (or your chosen dataset) organized correctly.
+2.  Modify the `TRAIN_HR_DIR`, `TRAIN_LR_DIR`, `VALID_HR_DIR`, and `VALID_LR_DIR` variables in the training script (`train_model.py` or similar) to point to your dataset locations.
+3.  Run the training script:
+    ```bash
+    python train_model.py
+    ```
+    *Training can take a significant amount of time depending on your hardware and the number of epochs.*
+
+---
+
+## Hardware Used
+
+The model was trained and tested on a laptop with the following specifications:
+
+* **GPU:** NVIDIA GeForce RTX 3050 (4GB VRAM)
+* **CPU:** [Your CPU Model, e.g., Intel Core i7-11800H]
+* **RAM:** [Your RAM Amount, e.g., 16GB DDR4]
+
+The project demonstrates the feasibility of training relatively complex deep learning models for video enhancement even on consumer-level hardware with careful resource management.
+
+---
+
+## Results and Observations
+
+* The trained model achieved a peak **PSNR of approximately 30 dB** on the validation set after 50 epochs of training. Further training may lead to higher PSNR values.
+* The deployment pipeline successfully upscales video while managing memory constraints.
+* Visual inspection of the upscaled video shows improved detail and sharpness compared to the low-resolution input, although the extent of the improvement depends on the original content and the model's training.
+* The output video exhibits an increased bitrate, which is expected for higher resolution content (e.g., from ~900 kbps for 480p to ~2 Mbps for 960p).
+
+---
+
+## Future Work
+
+* Train the model for a significantly larger number of epochs to potentially achieve higher PSNR and visual quality.
+* Experiment with different ViT model configurations (e.g., varying `MODEL_EMBED_DIM`, `MODEL_NUM_HEADS`, `MODEL_NUM_LAYERS`).
+* Explore the integration of perceptual loss functions to improve the perceptual quality of the upscaled video.
+* Investigate the use of other datasets for training and generalization.
+* Optimize the deployment pipeline for real-time performance on various hardware platforms.
