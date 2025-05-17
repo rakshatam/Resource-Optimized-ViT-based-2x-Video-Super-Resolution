@@ -88,8 +88,8 @@ To train the model yourself:
 The model was trained and tested on a laptop with the following specifications:
 
 * **GPU:** NVIDIA GeForce RTX 3050 (4GB VRAM)
-* **CPU:** [Your CPU Model, e.g., Intel Core i7-11800H]
-* **RAM:** [Your RAM Amount, e.g., 16GB DDR4]
+* **CPU:** [i5 11320H]
+* **RAM:** [16GB DDR4]
 
 The project demonstrates the feasibility of training relatively complex deep learning models for video enhancement even on consumer-level hardware with careful resource management.
 
