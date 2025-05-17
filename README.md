@@ -69,27 +69,15 @@ The pipeline generates a 2x upscaled video file with double the width and height
 
 **Note:** The visual improvement will depend on the complexity of the original video and the quality achieved during training (e.g., your reported PSNR of around 30 dB).
 
-## Model Training
 
-To train the model yourself:
-
-1.  Ensure you have the DIV2K dataset (or your chosen dataset) organized correctly.
-2.  Modify the `TRAIN_HR_DIR`, `TRAIN_LR_DIR`, `VALID_HR_DIR`, and `VALID_LR_DIR` variables in the training script (`train_model.py` or similar) to point to your dataset locations.
-3.  Run the training script:
-    ```bash
-    python train_model.py
-    ```
-    *Training can take a significant amount of time depending on your hardware and the number of epochs.*
-
----
 
 ## Hardware Used
 
 The model was trained and tested on a laptop with the following specifications:
 
 * **GPU:** NVIDIA GeForce RTX 3050 (4GB VRAM)
-* **CPU:** [i5 11320H]
-* **RAM:** [16GB DDR4]
+* **CPU:** Intel i5 11320H
+* **RAM:** 16GB DDR4
 
 The project demonstrates the feasibility of training relatively complex deep learning models for video enhancement even on consumer-level hardware with careful resource management.
 
