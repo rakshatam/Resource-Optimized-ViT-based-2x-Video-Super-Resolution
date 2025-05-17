@@ -22,8 +22,6 @@ The pipeline involves two main parts: **Training** and **Deployment (Inference)*
 
 ### 1. Training Pipeline
 
-The training script (`train_model.py` - *consider renaming your training script for clarity*) follows these steps:
-
 1.  **Dataset Preparation:** Loads the DIV2K dataset (or your chosen dataset) with paired low-resolution (bicubic downscaled) and high-resolution images.
 2.  **Patch Extraction:** Extracts smaller patches from the LR and HR images to facilitate training on limited VRAM. Multiple patches are sampled per image to increase the training data size.
 3.  **Model Definition:** Defines the `ViTSuperResolutionModel`, which includes:
@@ -61,13 +59,13 @@ The training script (`train_model.py` - *consider renaming your training script 
 
 The pipeline accepts standard video files (e.g., `.mp4`, `.avi`) as input. Below is an example of a low-resolution input frame (480x270):
 
-![Low-Resolution Input Frame](pic 1.png)
+![Low-Resolution Input Frame](pic_1.png)
 
 ### Output
 
 The pipeline generates a 2x upscaled video file with double the width and height of the input. Here's an example of a corresponding super-resolved output frame (960x540):
 
-![High-Resolution Output Frame](pic 2.png)
+![High-Resolution Output Frame](pic_2.png)
 
 **Note:** The visual improvement will depend on the complexity of the original video and the quality achieved during training (e.g., your reported PSNR of around 30 dB).
 
